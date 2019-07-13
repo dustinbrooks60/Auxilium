@@ -22,10 +22,14 @@
 
 <p>What do you need?</p>
 
-<div class="form-group">
-    <label for="help">Enter exactly what kind of help is required:</label>
-    <textarea class="form-control" rows="5" id="help"></textarea>
-    <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+<div class="container">
+    <form action="/action_page.php">
+        <div class="form-group">
+            <label for="comment">Enter exactly what you need in the box below:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
 
