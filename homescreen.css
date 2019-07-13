@@ -8,6 +8,12 @@ html, body {
     position: relative;
 }
 
+textarea {
+    height: 150px;
+    width: 150px;
+    margin-left: 25%;
+}
+
 p {
     text-align: center;
     font-weight: bold;
@@ -15,48 +21,37 @@ p {
     text-decoration: underline;
 }
 
+.btn-group button {
+    border: 1px solid green;
+    color: white;
+    padding: 24px;
+    margin-left: 25%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    width: 50%;
+    display: block;
+    align-items: center;
+}
 
-button:hover {background: #eee;}
+.btn-group button:not(:last-child) {
+    border-bottom: none;
+}
+
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
 
 #button_1 {
      background-color: #4CAF50;
-     border: black;
-     color: white;
-     padding: 15px 32px;
-     text-align: center;
-     text-decoration: none;
-     display: inline-block;
-     font-size: 16px;
-    font-weight: bold;
-     margin: 4px 2px;
-     cursor: pointer;
+
  }
 
 #button_2 {
     background-color: wheat;
-    border: black;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 4px 2px;
-    cursor: pointer;
 }
 
 
 #button_3 {
     background-color: red;
-    border: black;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 4px 2px;
-    cursor: pointer;
 }
