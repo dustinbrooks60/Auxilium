@@ -9,9 +9,12 @@ html, body {
 }
 
 textarea {
-    height: 150px;
-    width: 150px;
-    margin-left: 25%;
+    margin-left: 18%;
+}
+
+input {
+    display: block;
+    margin-left: 18%;
 }
 
 p {
@@ -21,37 +24,13 @@ p {
     text-decoration: underline;
 }
 
+
 .btn-group button {
-    border: 1px solid green;
     color: white;
-    padding: 24px;
-    margin-left: 25%;
+    padding: 50px;
+    margin-left: 40%;
     margin-bottom: 15px;
     cursor: pointer;
     width: 50%;
     display: block;
-    align-items: center;
-}
-
-.btn-group button:not(:last-child) {
-    border-bottom: none;
-}
-
-.btn-group button:hover {
-    background-color: #3e8e41;
-}
-
-
-#button_1 {
-     background-color: #4CAF50;
-
- }
-
-#button_2 {
-    background-color: wheat;
-}
-
-
-#button_3 {
-    background-color: red;
 }
