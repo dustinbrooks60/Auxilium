@@ -10,8 +10,53 @@ html, body {
 
 p {
     text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: underline;
 }
 
-button {
+
+button:hover {background: #eee;}
+
+#button_1 {
+     background-color: #4CAF50;
+     border: black;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+    font-weight: bold;
+     margin: 4px 2px;
+     cursor: pointer;
+ }
+
+#button_2 {
+    background-color: wheat;
+    border: black;
+    color: white;
+    padding: 15px 32px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+#button_3 {
+    background-color: red;
+    border: black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
 }
