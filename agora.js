@@ -131,21 +131,31 @@ function leave() {
         console.log("Leave channel failed");
     });
 }
-
-function publish() {
-    document.getElementById("publish").disabled = true;
-    document.getElementById("unpublish").disabled = false;
-    client.publish(localStream, function (err) {
-        console.log("Publish local stream error: " + err);
-    });
+function muteAudio()
+{
+    document.getElementById("unmuteAudio").disabled = false;
+    document.getElementById("muteAudio").disabled = true;
+    //localStream.disableAudio();
+    localStream.disableAudio();
+}
+function unmuteAudio()
+{
+    document.getElementById("unmuteAudio").disabled = true;
+    document.getElementById("muteAudio").disabled = false;
+    localStream.enableAudio();
 }
 
-function unpublish() {
-    document.getElementById("publish").disabled = false;
-    document.getElementById("unpublish").disabled = true;
-    client.unpublish(localStream, function (err) {
-        console.log("Unpublish local stream failed" + err);
-    });
+function enableVideo()
+{
+    document.getElementById("disableVideo").disabled = false;
+    document.getElementById("enableVideo").disabled = true;
+    localStream.enableVideo();
+}
+function disableVideo()
+{
+    document.getElementById("disableVideo").disabled = true;
+    document.getElementById("enableVideo").disabled = false;
+    localStream.disableVideo();
 }
 
 function getDevices() {
@@ -169,4 +179,13 @@ function getDevices() {
 
 //audioSelect.onchange = getDevices;
 //videoSelect.onchange = getDevices;
+setRemoteVideoStreamType();
+localStream.setVideoProfile('480P_1');
+
+client.setLowStreamParamter({
+    width: 120,
+    height: 120,
+    framerate: 15,
+    bitrate: 120,
+});
 getDevices();

@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <script src="agora.js" ></script>
+    <script src="https://cdn.agora.io/sdk/web/AgoraRTCSDK-2.7.0.js"></script>
+    <script src="vendor/jquery.js"></script>
+
+    <style>
+        img{
+            width: 64px;
+            height: 32px;
+        }
+    </style>
 </head>
 <body>
 <p>Select your status</p>
 <button class="buttons">SAFE</button>
 <button class="buttons">HELP</button>
 <button class="buttons">URGENT</button>
-
-<script src="agora.js" ></script>
-
-<link rel="stylesheet" href="vendor/bootstrap.min.css">
-<script src="AgoraRTCSDK-2.8.0.js"></script>
-
-<script src="vendor/jquery.js"></script>
 
 <script>
     let word;
@@ -46,6 +50,10 @@
         Host: <input id="video" type="checkbox" checked></input>
         <button id="join" class="btn btn-primary" onclick="join()">Join</button>
         <button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
+        <img id="muteAudio" src="assets/soundon.png" alt="" class="btn btn-primary" onclick="muteAudio()">
+        <img id="unmuteAudio" src="assets/soundoff.png" alt="" class="btn btn-primary" onclick="unmuteAudio()">
+        <button id="enableVideo" class="btn btn-primary" onclick="enableVideo()">Enable Video</button>
+        <button id="disableVideo" class="btn btn-primary" onclick="disableVideo()">Disable Video</button>
     </div>
 </div>
 
