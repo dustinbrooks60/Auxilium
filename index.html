@@ -2,20 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Disaster Relief in the Palm of Your Hands</title>
-    <link rel="stylesheet" type="text/css" href="homescreen.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="homescreen.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <style>
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+            html,
+            body,
+            header,
+            .view {
+                height: 100vh;
+            }
+        }
+
+        .top-nav-collapse {
+            background-color: #78909c !important;
+        }
+
+        .navbar:not(.top-nav-collapse) {
+            background: transparent !important;
+        }
+
+        @media (max-width: 991px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #78909c !important;
+            }
+        }
+
+        h1 {
+            letter-spacing: 8px;
+            margin-top: 5%;
+        }
+
+        h5 {
+            letter-spacing: 3px;
+        }
+
+        .hr-light {
+            border-top: 3px solid #fff;
+            width: 80px;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -30,13 +76,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">How It Works</a>
+                        <a class="nav-link" href="how_it_works.html">How It Works</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Who We Are</a>
+                        <a class="nav-link" href="bios.html">Who We Are</a>
                     </li>
                 </ul>
                 <form class="form-inline">
@@ -58,11 +104,12 @@
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-md-12 mb-4 white-text text-center">
-                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Minimalist intro</strong></h1>
+                        <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Disaster Relief</strong></h1>
                         <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
                         <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Disaster Relief</strong></h5>
-                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Sample Text 1</a>
-                        <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">Sample Text 2</a>
+                        <a class="btn btn-success btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="status.html">SAFE</a>
+                        <a class="btn btn-warning btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="needpage.html">HELP</a>
+                        <a class="btn btn-danger btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="needpage.html">URGENT</a>
                     </div>
                     <!--Grid column-->
                 </div>
@@ -82,10 +129,7 @@
         <div class="row py-5">
             <!--Grid column-->
             <div class="col-md-12 text-center">
-                <button type="button" class="btn btn-success btn-lg btn-block">SAFE</button>
-                <button type="button" class="btn btn-warning btn-lg btn-block">HELP</button>
-                <button type="button" class="btn btn-danger btn-lg btn-block">URGENT</button>
-                <p style="margin-top: 5%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
             <!--Grid column-->
         </div>
@@ -94,6 +138,18 @@
 </main>
 <!--Main Layout-->
 
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 
 
 </body>
