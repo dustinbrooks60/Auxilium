@@ -1,71 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Disaster Relief in the Palm of Your Hands</title>
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <style>
+
+        html,
+        body,
+        header,
+        .view {
+            height: 100%;
+        }
+
+        @media (max-width: 740px) {
+            html,
+            body,
+            header,
+            .view {
+                height: 100vh;
+            }
+        }
+
+        .top-nav-collapse {
+            background-color: #78909c !important;
+        }
+
+        .navbar:not(.top-nav-collapse) {
+            background: transparent !important;
+        }
+
+        @media (max-width: 991px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #78909c !important;
+            }
+        }
+
+        h1 {
+            letter-spacing: 8px;
+            margin-top: 5%;
+        }
+
+        h5 {
+            letter-spacing: 3px;
+        }
+
+        .hr-light {
+            border-top: 3px solid #fff;
+            width: 80px;
+        }
+    </style>
 
 </head>
 <body>
-<p>Select your status</p>
-<button class="buttons">SAFE</button>
-<button class="buttons">HELP</button>
-<button class="buttons">URGENT</button>
-
-<script>
-    let word;
-    let buttons = document.getElementsByClassName('buttons');
-    function getValue(){
-        for (let i = 0; i < buttons.length; i++){
-            buttons[i].onclick = function(){
-                word = buttons[i].innerText;
-                console.log(word);
-            }
-        }
-    }
-    getValue();
-</script>
-<div id="div_device" class="panel panel-default">
-    <div class="select">
-        <label for="audioSource">Audio source: </label><select id="audioSource"></select>
-    </div>
-    <div class="select">
-        <label for="videoSource">Video source: </label><select id="videoSource"></select>
-    </div>
-</div>
-
-<div id="div_join" class="panel panel-default">
-    <div class="panel-body">
-        App ID: <input id="appId" type="text" value="ea6d0d533ed4495e99a143157ea25cb5" size="36"></input>
-        Channel: <input id="channel" type="text" value="0000" size="4"></input>
-        Host: <input id="video" type="checkbox" checked></input>
-        <button id="join" class="btn btn-primary" onclick="join()">Join</button>
-        <button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
-        <img id="muteAudio" src="assets/soundon.png" alt="" class="btn btn-primary" onclick="muteAudio()">
-        <img id="unmuteAudio" src="assets/soundoff.png" alt="" class="btn btn-primary" onclick="unmuteAudio()">
-        <button id="enableVideo" class="btn btn-primary" onclick="enableVideo()">Enable Video</button>
-        <button id="disableVideo" class="btn btn-primary" onclick="disableVideo()">Disable Video</button>
-    </div>
-</div>
-
-<!--style>
-.video__box{width:910px; margin:0 auto; overflow:hidden;}
-.video__main{ width:810px; height:607px;float:left }
-.video__list{ width:200px; height:607px; float:left;}
-.video__item{ width:200px; height:174px; hei background:url(/img/icon_live.png) center center no-repeat; }
-</style>
-<div class="video__main">
-</div>
-<div class="video__list">
-    <div class="video__item"></div>
-    <div id="video" class="video__item">
-        <div id="agora_local"></div>
-    </div>
-</div-->
-
-<div id="video" style="margin:0 auto;">
-    <div id="agora_local" style="float:right;width:210px;height:147px;display:inline-block;"></div>
-</div>
-</body>
 
 <header>
     <!--Navbar-->
@@ -109,9 +108,15 @@
                         <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Auxilium</strong></h1>
                         <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
                         <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Disaster Relief</strong></h5>
-                        <a class="btn btn-success btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="status.html">SAFE</a>
-                        <a class="btn btn-warning btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="needpage.html">HELP</a>
-                        <a class="btn btn-danger btn-lg btn-block wow fadeInDown" data-wow-delay="0.4s" href="needpage.html">URGENT</a>
+                        <div class="container">
+                            <form action="/action_page.php">
+                                <div class="form-group">
+                                    <label for="comment">Enter exactly what you need in the box below:</label>
+                                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
                     </div>
                     <!--Grid column-->
                 </div>
@@ -156,4 +161,3 @@
 
 </body>
 </html>
-

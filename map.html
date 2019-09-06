@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <!--Set map size - div-->
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            // Users current location
+            let city = {lat: 47.6020041, lng: -122.3352948};
+            let map = new google.maps.Map(
+                document.getElementById("map"),
+                // Map zoom can be changed ie: closer or further away
+                {zoom: 13, center: city}
+            );
+            new google.maps.Marker({position: city, map: map})
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBtkQiVQnfwMX7fU3GQrZxJkvx6_64Jcc&callback=initMap">
+    </script>
+</body>
+</html>
